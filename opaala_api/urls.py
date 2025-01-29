@@ -17,9 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include, re_path
 
-from api.controller import Books
+from api.controller.Books import Books
  
 urlpatterns = [ 
-    #path('api/books', Books.list)
+    #path('api/books', Books.as_view(),name='index')
     re_path(r'^api/',include('api.appurls'))
 ]
