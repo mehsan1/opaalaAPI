@@ -9,5 +9,4 @@ class BooksDTO(serializers.ModelSerializer):
         fields = ('id',
                   'title',
                   'year',
-                  'name',
-                  'list_id')
+                  'name')
