@@ -33,7 +33,9 @@ class BookService:
         _book.year = book["year"]
         if book["list_id"] and book["list_id"] != "" and int(book["list_id"]) > 0:
             _list = List(book["list_id"])
-            _book.list = _list
+        else:
+            _list = None
+        _book.list = _list
         return _book.save()
 
     def delete_book(self, book: dict):
