@@ -12,4 +12,5 @@ class ListBooks(models.Model):
     book = models.ForeignKey(Book, on_delete=models.DO_NOTHING, null=True)
     list = models.ForeignKey(List, on_delete=models.DO_NOTHING, null=True)
 
+
 objects = ListBooksRepository()

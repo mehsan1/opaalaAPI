@@ -7,6 +7,7 @@ class ListRepository(models.Manager):
 
 
 class List(models.Model):
-    title = models.CharField(max_length=70, blank=False, default='')
+    title = models.CharField(max_length=70, blank=False, default="")
+
 
 objects = ListRepository()
